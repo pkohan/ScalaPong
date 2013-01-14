@@ -17,7 +17,7 @@ object Paddle {
 class Paddle(var x:Int, var y:Int, c:Color, up:Int, down:Int) extends DrawableObject {
 
   //speed in pixels/ms
-  val speed = 1.0f
+  val speed = 0.75f
 
   /**
    * Draws the paddle onto the field
@@ -36,10 +36,24 @@ class Paddle(var x:Int, var y:Int, c:Color, up:Int, down:Int) extends DrawableOb
     GL11.glEnd()
   }
 
+  /**
+   * Handles the keyboard input for the paddle and moves it accordingly
+   */
   def update() {
     val delta = getDelta
-    if (Keyboard.isKeyDown(up)) y += (delta * (speed)).toInt
-    else if (Keyboard.isKeyDown(down))  y -= (delta * (speed)).toInt
+    if (Keyboard.isKeyDown(up)) moveUp(delta)
+    else if (Keyboard.isKeyDown(down))  moveDown(delta)
   }
+
+  def moveUp(delta:Int) {
+    if (topBoundary <= PongDisplay.Height) y += (delta * speed).toInt
+  }
+
+  def moveDown(delta:Int) {
+    if (bottomBoundary >= 0) y -= (delta * speed).toInt
+  }
+
+  def topBoundary = y + Paddle.Height
+  def bottomBoundary = y
 
 }

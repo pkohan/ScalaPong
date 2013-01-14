@@ -12,14 +12,15 @@ import util.Color
 object PongDisplay {
 
   val drawQueue:scala.collection.mutable.Queue[DrawableObject] = new scala.collection.mutable.Queue[DrawableObject]
-
+  val Width = 800
+  val Height = 600
   /**
    * Creates the display and runs the game loop
    * TODO: Move game loop to its own method
    */
   def start() {
     try {
-      Display.setDisplayMode(new opengl.DisplayMode(800,600))
+      Display.setDisplayMode(new opengl.DisplayMode(Width,Height))
       Display.create()
     } catch {
       case e:LWJGLException =>
@@ -33,7 +34,7 @@ object PongDisplay {
 
     GL11.glMatrixMode(GL11.GL_PROJECTION)
     GL11.glLoadIdentity()
-    GL11.glOrtho(0, 800, 0, 600, 1, -1)
+    GL11.glOrtho(0, Width, 0, Height, 1, -1)
     GL11.glMatrixMode(GL11.GL_MODELVIEW)
 
     while (!Display.isCloseRequested) {
@@ -42,6 +43,7 @@ object PongDisplay {
       drawQueue.foreach(_.update())
       drawQueue.foreach(_.draw())
       Display.update()
+      Display.sync(60)
     }
     Display.destroy()
   }
