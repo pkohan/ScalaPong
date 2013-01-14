@@ -4,6 +4,7 @@
  * Time: 3:37 PM
  */
 
+import org.lwjgl.input.Keyboard
 import org.lwjgl.{opengl, LWJGLException}
 import opengl.{GL11, Display}
 import util.Color
@@ -27,8 +28,8 @@ object PongDisplay {
     }
 
     //Initialize drawable objects and put them in the draw queue
-    drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f)))
-    drawQueue.enqueue(new Paddle(650, 100, new Color(0.5f, 0.0f, 0.0f)))
+    drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f), Keyboard.KEY_UP, Keyboard.KEY_DOWN))
+    drawQueue.enqueue(new Paddle(650, 100, new Color(0.5f, 0.0f, 0.0f), Keyboard.KEY_W, Keyboard.KEY_S))
 
     GL11.glMatrixMode(GL11.GL_PROJECTION)
     GL11.glLoadIdentity()

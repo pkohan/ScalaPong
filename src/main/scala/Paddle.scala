@@ -14,7 +14,7 @@ object Paddle {
   val Height = 200
 }
 
-class Paddle(var x:Int, var y:Int, c:Color) extends DrawableObject {
+class Paddle(var x:Int, var y:Int, c:Color, up:Int, down:Int) extends DrawableObject {
 
   //speed in pixels/ms
   val speed = 1.0f
@@ -38,8 +38,8 @@ class Paddle(var x:Int, var y:Int, c:Color) extends DrawableObject {
 
   def update() {
     val delta = getDelta
-    if (Keyboard.isKeyDown(Keyboard.KEY_UP)) y += (delta * (speed)).toInt
-    else if (Keyboard.isKeyDown(Keyboard.KEY_DOWN))  y -= (delta * (speed)).toInt
+    if (Keyboard.isKeyDown(up)) y += (delta * (speed)).toInt
+    else if (Keyboard.isKeyDown(down))  y -= (delta * (speed)).toInt
   }
 
 }
