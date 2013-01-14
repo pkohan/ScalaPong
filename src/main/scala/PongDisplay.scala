@@ -25,11 +25,16 @@ object PongDisplay {
         e.printStackTrace()
         sys.exit(0)
     }
+
+    //Initialize drawable objects and put them in the draw queue
     drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f)))
+    drawQueue.enqueue(new Paddle(650, 100, new Color(0.5f, 0.0f, 0.0f)))
+
     GL11.glMatrixMode(GL11.GL_PROJECTION)
     GL11.glLoadIdentity()
     GL11.glOrtho(0, 800, 0, 600, 1, -1)
     GL11.glMatrixMode(GL11.GL_MODELVIEW)
+
     while (!Display.isCloseRequested) {
       // Clear the screen and depth buffer
       GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT)
