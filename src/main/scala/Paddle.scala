@@ -1,3 +1,5 @@
+
+import org.lwjgl.input.Keyboard
 import org.lwjgl.opengl.GL11
 import util.Color
 
@@ -12,14 +14,17 @@ object Paddle {
   val Height = 200
 }
 
-class Paddle(x:Int, y:Int, c:Color) extends DrawableObject {
+class Paddle(var x:Int, var y:Int, c:Color) extends DrawableObject {
+
+  //speed in pixels/ms
+  val speed = 1.0f
 
   /**
    * Draws the paddle onto the field
    */
   def draw() {
     // set the color of the quad (R,G,B,A)
-    //TODO: find way to shorten this
+    //TODO: maybe scala has a way to do auto parameter expansions, e.g. ruby hash parameter lists
 
     GL11.glColor4f(c.r, c.g, c.b, c.a)
     // draw quad
@@ -29,6 +34,12 @@ class Paddle(x:Int, y:Int, c:Color) extends DrawableObject {
     GL11.glVertex2f(x + Paddle.Width,y + Paddle.Height)
     GL11.glVertex2f(x,y + Paddle.Height)
     GL11.glEnd()
+  }
+
+  def update() {
+    val delta = getDelta
+    if (Keyboard.isKeyDown(Keyboard.KEY_UP)) y += (delta * (speed)).toInt
+    else if (Keyboard.isKeyDown(Keyboard.KEY_DOWN))  y -= (delta * (speed)).toInt
   }
 
 }
