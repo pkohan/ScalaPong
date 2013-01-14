@@ -9,6 +9,9 @@ import org.lwjgl.{opengl, LWJGLException}
 import opengl.{GL11, Display}
 import util.Color
 
+/**
+ * Singleton that represents the main game display, contains the main game loop
+ */
 object PongDisplay {
 
   val drawQueue:scala.collection.mutable.Queue[DrawableObject] = new scala.collection.mutable.Queue[DrawableObject]

@@ -5,6 +5,10 @@ import org.lwjgl.Sys
  * Date: 1/13/13
  * Time: 4:32 PM
  */
+
+/**
+ * Class Representing a object that can be drawn on the display
+ */
 abstract class DrawableObject {
 
   var lastFrame = 0l
@@ -18,8 +22,16 @@ abstract class DrawableObject {
    */
   def update()
 
+  /**
+   * Gets the current time from lwjgl in milliseconds
+   * @return current system time in milliseconds
+   */
   def getTime:Long = Sys.getTime * 1000 / Sys.getTimerResolution
 
+  /**
+   * Computes the number of seconds since the last frame update
+   * @return number of seconds since last frame update
+   */
   def getDelta:Int = {
     val time = getTime
     val delta = (getTime - lastFrame).toInt

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" name="Default" comment="Can move paddles separately now, Paddle constructor now takes an &quot;up&quot; and &quot;down&quot; key&#10;">
+    <list default="true" id="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" name="Default" comment="Bounded Paddles to the display edges so they don't fly off the screen">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/util/Color.scala" afterPath="$PROJECT_DIR$/src/main/scala/util/Color.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" afterPath="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Paddle.scala" afterPath="$PROJECT_DIR$/src/main/scala/Paddle.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" afterPath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Runner.scala" afterPath="$PROJECT_DIR$/src/main/scala/Runner.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScalaPong.iml" afterPath="$PROJECT_DIR$/ScalaPong.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
@@ -19,15 +22,15 @@
     </list>
     <ignored path="ScalaPong.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358133521169" ignored="false" />
-    <file path="/Runner.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358120352483" ignored="false" />
+    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134233136" ignored="false" />
+    <file path="/Runner.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134254247" ignored="false" />
     <file path="/fragment.java" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358126770588" ignored="false" />
     <file path="/a.dummy" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358120434251" ignored="false" />
     <file path="/DisplayWrapper.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358120341285" ignored="false" />
-    <file path="/DrawableObject.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358132605767" ignored="false" />
-    <file path="/Paddle.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358133577160" ignored="false" />
-    <file path="/PongDisplay.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358133316482" ignored="false" />
-    <file path="/Color.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358126610291" ignored="false" />
+    <file path="/DrawableObject.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134083635" ignored="false" />
+    <file path="/Paddle.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134160653" ignored="false" />
+    <file path="/PongDisplay.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134205757" ignored="false" />
+    <file path="/Color.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134026001" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +92,7 @@
       <file leaf-file-name="PongDisplay.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/PongDisplay.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="62" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+            <state line="25" column="5" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#63#94#0" expanded="true" />
               </folding>
@@ -97,10 +100,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Paddle.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Runner.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Runner.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="70" selection-start="180" selection-end="180" vertical-scroll-proportion="0.1559633">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Paddle.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="3" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.4097222">
+            <state line="62" column="16" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1#32#0" expanded="true" />
               </folding>
@@ -108,10 +122,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Color.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/util/Color.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="5" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DrawableObject.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="20" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+            <state line="9" column="63" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,11 +160,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/Display.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DisplayWrapper.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Runner.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/util/Color.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Paddle.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Runner.scala" />
       </list>
     </option>
   </component>
@@ -220,32 +243,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="scala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScalaPong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScalaPong" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Paddle.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -478,7 +475,11 @@
       <created>1358133129759</created>
       <updated>1358133129759</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Bounded Paddles to the display edges so they don't fly off the screen">
+      <created>1358133676906</created>
+      <updated>1358133676906</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -519,7 +520,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19477054" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.4955947" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.4955947" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -565,7 +566,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can move paddles separately now, Paddle constructor now takes an &quot;up&quot; and &quot;down&quot; key&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bounded Paddles to the display edges so they don't fly off the screen" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -585,6 +586,7 @@
     <MESSAGE value="Commiting library" />
     <MESSAGE value="Can move both paddles up and down now" />
     <MESSAGE value="Can move paddles separately now, Paddle constructor now takes an &quot;up&quot; and &quot;down&quot; key&#10;" />
+    <MESSAGE value="Bounded Paddles to the display edges so they don't fly off the screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -650,16 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Runner.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/util/Color.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -681,27 +673,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/util/Color.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
+        <state line="9" column="63" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="16" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/PongDisplay.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="62" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+        <state line="25" column="5" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#63#94#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Runner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="3" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.4097222">
+        <state line="8" column="70" selection-start="180" selection-end="180" vertical-scroll-proportion="0.1559633">
           <folding>
-            <element signature="e#1#32#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

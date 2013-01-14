@@ -9,11 +9,22 @@ import util.Color
  * Time: 4:35 PM
  */
 
+/**
+ * Companion Object to hold width and height of a paddle
+ */
 object Paddle {
   val Width = 50
   val Height = 200
 }
 
+/**
+ * Class representing a Pong paddle
+ * @param x Starting x position
+ * @param y Starting y position
+ * @param c Color of the paddle
+ * @param up Keyboard.Key that makes the paddle move up
+ * @param down Keyboard.Key that makes the paddle move down
+ */
 class Paddle(var x:Int, var y:Int, c:Color, up:Int, down:Int) extends DrawableObject {
 
   //speed in pixels/ms
@@ -45,15 +56,30 @@ class Paddle(var x:Int, var y:Int, c:Color, up:Int, down:Int) extends DrawableOb
     else if (Keyboard.isKeyDown(down))  moveDown(delta)
   }
 
+  /**
+   * Moves the paddle up based on how many milliseconds have passed
+   * @param delta number of milliseconds that have elapsed since the last frame
+   */
   def moveUp(delta:Int) {
     if (topBoundary <= PongDisplay.Height) y += (delta * speed).toInt
   }
 
+  /**
+   * Moves the paddle down based on how many milliseconds have passed
+   * @param delta number of milliseconds that have elapsed since the last frame
+   */
   def moveDown(delta:Int) {
     if (bottomBoundary >= 0) y -= (delta * speed).toInt
   }
 
+  /**
+   * @return Location of top of the paddle
+   */
   def topBoundary = y + Paddle.Height
+
+  /**
+   * @return Location of bottom of the paddle
+   */
   def bottomBoundary = y
 
 }
