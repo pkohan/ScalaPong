@@ -6,12 +6,16 @@
 
 import org.lwjgl.{opengl, LWJGLException}
 import opengl.{GL11, Display}
-import scala.collection.mutable._
+import util.Color
 
 object PongDisplay {
 
   val drawQueue:scala.collection.mutable.Queue[DrawableObject] = new scala.collection.mutable.Queue[DrawableObject]
 
+  /**
+   * Creates the display and runs the game loop
+   * TODO: Move game loop to its own method
+   */
   def start() {
     try {
       Display.setDisplayMode(new opengl.DisplayMode(800,600))
@@ -21,7 +25,7 @@ object PongDisplay {
         e.printStackTrace()
         sys.exit(0)
     }
-    drawQueue.enqueue(new Paddle)
+    drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f)))
     GL11.glMatrixMode(GL11.GL_PROJECTION)
     GL11.glLoadIdentity()
     GL11.glOrtho(0, 800, 0, 600, 1, -1)
