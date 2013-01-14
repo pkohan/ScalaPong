@@ -13,8 +13,8 @@ import util.Color
  * Companion Object to hold width and height of a paddle
  */
 object Paddle {
-  val Width = 50
-  val Height = 200
+  val Width = 25
+  val Height = 125
 }
 
 /**

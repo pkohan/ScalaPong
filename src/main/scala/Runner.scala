@@ -10,6 +10,6 @@
  */
 object Runner {
   def main(args: Array[String]) {
-    PongDisplay.start
+    PongDisplay.start()
   }
 }

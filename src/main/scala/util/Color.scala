@@ -14,6 +14,7 @@ package util
  * @param a Float representing alpha (0.0f - 1.0f)
  */
 class Color(val r:Float, val g:Float, val b:Float, val a:Float) {
+
   /**
    * Class representing a color with RGB and alpha attributes
    * @param r Float representing red (0.0f - 1.0f)
