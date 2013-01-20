@@ -8,8 +8,10 @@ import org.lwjgl.Sys
 
 /**
  * Class Representing a object that can be drawn on the display
+ * @param x X position of the object
+ * @param y Y position of the object
  */
-abstract class DrawableObject(var LastFrame:Long = Sys.getTime) {
+abstract class DrawableObject(var x:Int, var y:Int,var LastFrame:Long = Sys.getTime) {
 
   /**
    * Method to draw the object onto a display

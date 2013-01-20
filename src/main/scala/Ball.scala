@@ -23,11 +23,11 @@ object Ball {
 
 /**
  * Represents the ball in a Pong game
- * @param x Starting x position of the ball
- * @param y Starting y position of the ball
+ * @param init_x Starting x position of the ball
+ * @param init_y Starting y position of the ball
  * @param c Color of the ball
  */
-class Ball(var x:Int, var y:Int, c:Color) extends DrawableObject {
+class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x,init_y) {
 
   var xVel:Float = 0.0f
   var yVel:Float = 0.0f
@@ -60,7 +60,7 @@ class Ball(var x:Int, var y:Int, c:Color) extends DrawableObject {
     val delta = getDelta
     if (x <= 10 || x >= PongDisplay.Width - 10) xVel = -xVel
     if (y <= 10 || y >= PongDisplay.Height - 10) yVel = -yVel
-    x += (delta * xVel).toInt //first delta is huge and flies the ball off the screen
+    x += (delta * xVel).toInt
     y += (delta * yVel).toInt
   }
 

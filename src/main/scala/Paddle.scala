@@ -19,13 +19,13 @@ object Paddle {
 
 /**
  * Class representing a Pong paddle
- * @param x Starting x position
- * @param y Starting y position
+ * @param init_x Starting x position
+ * @param init_y Starting y position
  * @param c Color of the paddle
  * @param up Keyboard.Key that makes the paddle move up
  * @param down Keyboard.Key that makes the paddle move down
  */
-class Paddle(var x:Int, var y:Int, c:Color, up:Int, down:Int) extends DrawableObject {
+class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends DrawableObject(init_x,init_y) {
 
   //speed in pixels/ms
   val speed = 0.75f
