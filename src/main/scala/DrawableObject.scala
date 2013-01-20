@@ -9,9 +9,8 @@ import org.lwjgl.Sys
 /**
  * Class Representing a object that can be drawn on the display
  */
-abstract class DrawableObject {
+abstract class DrawableObject(var LastFrame:Long = Sys.getTime) {
 
-  var lastFrame = 0l
   /**
    * Method to draw the object onto a display
    */
@@ -34,8 +33,8 @@ abstract class DrawableObject {
    */
   def getDelta:Int = {
     val time = getTime
-    val delta = (getTime - lastFrame).toInt
-    lastFrame = time
+    val delta = (getTime - LastFrame).toInt
+    LastFrame = time
     delta
   }
 }

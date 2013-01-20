@@ -5,7 +5,7 @@
  */
 
 import org.lwjgl.input.Keyboard
-import org.lwjgl.{opengl, LWJGLException}
+import org.lwjgl.{Sys, opengl, LWJGLException}
 import opengl.{GL11, Display}
 import util.Color
 
@@ -17,6 +17,7 @@ object PongDisplay {
   val drawQueue:scala.collection.mutable.Queue[DrawableObject] = new scala.collection.mutable.Queue[DrawableObject]
   val Width = 800
   val Height = 600
+  val StartTime = Sys.getTime
   /**
    * Creates the display and runs the game loop
    * TODO: Move game loop to its own method
@@ -34,7 +35,7 @@ object PongDisplay {
     //Initialize drawable objects and put them in the draw queue
     drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f), Keyboard.KEY_UP, Keyboard.KEY_DOWN))
     drawQueue.enqueue(new Paddle(650, 100, new Color(0.5f, 0.0f, 0.0f), Keyboard.KEY_W, Keyboard.KEY_S))
-    drawQueue.enqueue(new Ball(400, 400, new Color(0.0f, 0.0f, 0.5f)))
+    drawQueue.enqueue(Ball(400, 400, new Color(0.0f, 0.0f, 0.5f)))
 
     GL11.glMatrixMode(GL11.GL_PROJECTION)
     GL11.glLoadIdentity()
