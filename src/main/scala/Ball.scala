@@ -31,7 +31,6 @@ object Ball {
     b.initRandomVelocity()
     b
   }
-
 }
 
 /**

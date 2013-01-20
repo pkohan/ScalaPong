@@ -12,6 +12,8 @@ import scala.collection.mutable
  */
 trait Collidable {
 
+  require(this.isInstanceOf[DrawableObject], "An object can only be collidable if it's drawable")
+
   implicit var x:Int
   implicit var y:Int
   implicit var width:Int
@@ -80,9 +82,5 @@ object BoundingBox {
    * @param height Height of box
    * @return New BoundingBox with given parameters
    */
-  def apply(x:Int, y:Int, width:Int, height:Int): BoundingBox = {
-    val b = new BoundingBox(x,y,width,height)
-    //println(b)
-    b
-  }
+  def apply(x:Int, y:Int, width:Int, height:Int): BoundingBox = new BoundingBox(x,y,width,height)
 }
