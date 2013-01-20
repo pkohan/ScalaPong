@@ -45,7 +45,7 @@ object PongDisplay {
     while (!Display.isCloseRequested) {
       // Clear the screen and depth buffer
       GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT)
-      drawQueue.foreach(_.update())
+      drawQueue.foreach(_.update(drawQueue))
       drawQueue.foreach(_.draw())
       Display.update()
       Display.sync(60)

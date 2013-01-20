@@ -1,4 +1,5 @@
 import org.lwjgl.Sys
+import scala.collection.mutable
 
 /**
  * User: Paul Kohan
@@ -11,7 +12,7 @@ import org.lwjgl.Sys
  * @param x X position of the object
  * @param y Y position of the object
  */
-abstract class DrawableObject(var x:Int, var y:Int,var LastFrame:Long = Sys.getTime) {
+abstract class DrawableObject(var x:Int, var y:Int, var width:Int, var height:Int, var LastFrame:Long = Sys.getTime) {
 
   /**
    * Method to draw the object onto a display
@@ -21,7 +22,12 @@ abstract class DrawableObject(var x:Int, var y:Int,var LastFrame:Long = Sys.getT
   /**
    * Method to update the object, where things such as input and movement are handled
    */
-  def update()
+  def update(others:mutable.Queue[DrawableObject]) {
+    if (this.isInstanceOf[Collidable]) {
+      this.asInstanceOf[Collidable].updateBoundingBox()
+      this.asInstanceOf[Collidable].checkCollisions(others)
+    }
+  }
 
   /**
    * Gets the current time from lwjgl in milliseconds

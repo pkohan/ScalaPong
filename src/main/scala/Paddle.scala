@@ -2,6 +2,7 @@
 import org.lwjgl.input.Keyboard
 import org.lwjgl.opengl.GL11
 import util.Color
+import scala.collection.mutable
 
 /**
  * User: Paul Kohan
@@ -25,7 +26,7 @@ object Paddle {
  * @param up Keyboard.Key that makes the paddle move up
  * @param down Keyboard.Key that makes the paddle move down
  */
-class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends DrawableObject(init_x,init_y) {
+case class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends DrawableObject(init_x,init_y, Paddle.Width, Paddle.Height) with Collidable {
 
   //speed in pixels/ms
   val speed = 0.75f
@@ -50,7 +51,8 @@ class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends Drawable
   /**
    * Handles the keyboard input for the paddle and moves it accordingly
    */
-  def update() {
+  override def update(others:mutable.Queue[DrawableObject]) {
+    super.update(others)
     val delta = getDelta
     if (Keyboard.isKeyDown(up)) moveUp(delta)
     else if (Keyboard.isKeyDown(down))  moveDown(delta)
@@ -61,7 +63,7 @@ class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends Drawable
    * @param delta number of milliseconds that have elapsed since the last frame
    */
   def moveUp(delta:Int) {
-    if (topBoundary <= PongDisplay.Height) y += (delta * speed).toInt
+    if (boundingBox.top <= PongDisplay.Height) y += (delta * speed).toInt
   }
 
   /**
@@ -69,17 +71,8 @@ class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends Drawable
    * @param delta number of milliseconds that have elapsed since the last frame
    */
   def moveDown(delta:Int) {
-    if (bottomBoundary >= 0) y -= (delta * speed).toInt
+    if (boundingBox.bot >= 0) y -= (delta * speed).toInt
   }
 
-  /**
-   * @return Location of top of the paddle
-   */
-  def topBoundary = y + Paddle.Height
-
-  /**
-   * @return Location of bottom of the paddle
-   */
-  def bottomBoundary = y
-
+  def onCollision(other: Collidable) {return} //Intentionally Blank
 }

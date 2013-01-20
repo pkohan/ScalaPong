@@ -7,11 +7,14 @@
 import org.lwjgl.opengl.GL11
 import util.Color
 import scala.util.Random
+import scala.collection.mutable
 
 object Ball {
-  val MaxSpeed = 0.5f
+  val MaxSpeed = 0.6f
   val Radius = 10.0f
   val Roundness = 10
+
+  def diameter = Radius * 2
 
   def apply(x:Int, y:Int, c:Color):Ball = {
     val b = new Ball(x,y,c)
@@ -27,7 +30,7 @@ object Ball {
  * @param init_y Starting y position of the ball
  * @param c Color of the ball
  */
-class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x,init_y) {
+class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball.Radius.toInt,init_y - Ball.Radius.toInt, Ball.diameter.toInt, Ball.diameter.toInt) with Collidable {
 
   var xVel:Float = 0.0f
   var yVel:Float = 0.0f
@@ -51,12 +54,13 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x,init_y
   private def initRandomVelocity() {
     val rand = new Random()
     val randAngle = Math.PI * 2 * rand.nextFloat() //TODO: make sure this doesn't go too parallel to paddles
-    //println(randAngle)
-    xVel = Ball.MaxSpeed / Math.cos(randAngle).toFloat
-    yVel = Ball.MaxSpeed / Math.sin(randAngle).toFloat
+    //println(randAngle)w
+    xVel = Ball.MaxSpeed * Math.cos(randAngle).toFloat
+    yVel = Ball.MaxSpeed * Math.sin(randAngle).toFloat
   }
 
-  def update() {
+  override def update(others:mutable.Queue[DrawableObject]) {
+    super.update(others)
     val delta = getDelta
     if (x <= 10 || x >= PongDisplay.Width - 10) xVel = -xVel
     if (y <= 10 || y >= PongDisplay.Height - 10) yVel = -yVel
@@ -65,4 +69,13 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x,init_y
   }
 
   override def toString:String = "Ball: <X: " + x + ", Y:" + y + " >"
+
+  def onCollision(other: Collidable) {
+    other match {
+      case _:Paddle =>
+        println("COLLISION")
+        xVel = -xVel
+      case _ =>
+    }
+  }
 }
