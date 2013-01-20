@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/Collidable.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Ball.scala" afterPath="$PROJECT_DIR$/src/main/scala/Ball.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" afterPath="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Paddle.scala" afterPath="$PROJECT_DIR$/src/main/scala/Paddle.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Paul.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Paul.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" afterPath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScalaPong.iml" afterPath="$PROJECT_DIR$/ScalaPong.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
@@ -23,16 +19,16 @@
     </list>
     <ignored path="ScalaPong.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358653215815" ignored="false" />
+    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358660389668" ignored="false" />
     <file path="/Runner.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358310080460" ignored="false" />
     <file path="/fragment.java" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358310544243" ignored="false" />
     <file path="/a.dummy" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358653450673" ignored="false" />
     <file path="/DisplayWrapper.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358120341285" ignored="false" />
     <file path="/DrawableObject.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358656922166" ignored="false" />
-    <file path="/Paddle.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358656887956" ignored="false" />
+    <file path="/Paddle.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358659208646" ignored="false" />
     <file path="/PongDisplay.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358656897022" ignored="false" />
     <file path="/Color.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134026001" ignored="false" />
-    <file path="/Ball.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358657452728" ignored="false" />
+    <file path="/Ball.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358660412687" ignored="false" />
     <file path="/README.md" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358137606213" ignored="false" />
     <file path="/Collidable.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358658444612" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -129,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Collidable.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Collidable.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Collidable.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="36" selection-start="2412" selection-end="2412" vertical-scroll-proportion="1.237435">
+            <state line="62" column="13" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#33#94#0" expanded="false" />
               </folding>
@@ -140,10 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ball.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Ball.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="54" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
+            <state line="76" column="81" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.3761468">
               <folding>
                 <element signature="e#63#91#0" expanded="true" />
               </folding>
@@ -154,7 +150,7 @@
       <file leaf-file-name="Paddle.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="3" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
+            <state line="54" column="24" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1#32#0" expanded="true" />
               </folding>
@@ -173,6 +169,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -192,11 +189,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/Runner.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/util/Color.scala" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/scala/Paddle.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Ball.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Collidable.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Paddle.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Ball.scala" />
       </list>
     </option>
   </component>
@@ -456,10 +453,14 @@
       <created>1358651044052</created>
       <updated>1358651044052</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added collision detection classes and methods, made ball properly collide with paddles.">
+      <created>1358658470902</created>
+      <updated>1358658470902</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -491,7 +492,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32850778" sideWeight="0.5026681" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32739422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.49359658" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.49359658" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,7 +544,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored X and Y positions to DrawableObject" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commenting Spree, removed extra debug statement" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -568,6 +569,8 @@
     <MESSAGE value="Added Readme.md. Added Ball class." />
     <MESSAGE value="Ball now works instead of flying off the screen, but is still way too fast." />
     <MESSAGE value="Refactored X and Y positions to DrawableObject" />
+    <MESSAGE value="Added collision detection classes and methods, made ball properly collide with paddles." />
+    <MESSAGE value="Commenting Spree, removed extra debug statement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -643,24 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="54" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#63#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="3" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="36" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
@@ -670,11 +655,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="24" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Collidable.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="36" selection-start="2412" selection-end="2412" vertical-scroll-proportion="1.237435">
+        <state line="62" column="13" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#33#94#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="81" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.3761468">
+          <folding>
+            <element signature="e#63#91#0" expanded="true" />
           </folding>
         </state>
       </provider>

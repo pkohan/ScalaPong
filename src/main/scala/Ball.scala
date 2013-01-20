@@ -9,6 +9,9 @@ import util.Color
 import scala.util.Random
 import scala.collection.mutable
 
+/**
+ * Companion object for Ball
+ */
 object Ball {
   val MaxSpeed = 0.6f
   val Radius = 10.0f
@@ -16,6 +19,13 @@ object Ball {
 
   def diameter = Radius * 2
 
+  /**
+   * Create a Ball with the given parameters and return it
+   * @param x Starting x position of the ball
+   * @param y Starting y position of the ball
+   * @param c Color of the ball
+   * @return new Ball with given parameters
+   */
   def apply(x:Int, y:Int, c:Color):Ball = {
     val b = new Ball(x,y,c)
     b.initRandomVelocity()
@@ -51,6 +61,9 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
     GL11.glPopMatrix()
   }
 
+  /**
+   * Initialize the ball at a random angle and velocity
+   */
   private def initRandomVelocity() {
     val rand = new Random()
     val randAngle = Math.PI * 2 * rand.nextFloat() //TODO: make sure this doesn't go too parallel to paddles
@@ -59,6 +72,10 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
     yVel = Ball.MaxSpeed * Math.sin(randAngle).toFloat
   }
 
+  /**
+   * Update the ball's position and check for collisions with boundary of the map
+   * @param others mutable Queue of DrawableObjects, used to check for collisions
+   */
   override def update(others:mutable.Queue[DrawableObject]) {
     super.update(others)
     val delta = getDelta
@@ -70,10 +87,14 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
 
   override def toString:String = "Ball: <X: " + x + ", Y:" + y + " >"
 
+  /**
+   * Handle collision of Ball with other objects. Currently only reacts if colliding with a Paddle, in which case
+   * it's x velocity is reversed
+   * @param other Object that collided with this
+   */
   def onCollision(other: Collidable) {
     other match {
       case _:Paddle =>
-        println("COLLISION")
         xVel = -xVel
       case _ =>
     }

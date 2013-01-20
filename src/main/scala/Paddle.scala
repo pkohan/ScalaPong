@@ -74,5 +74,9 @@ case class Paddle(init_x:Int, init_y:Int, c:Color, up:Int, down:Int) extends Dra
     if (boundingBox.bot >= 0) y -= (delta * speed).toInt
   }
 
-  def onCollision(other: Collidable) {return} //Intentionally Blank
+  /**
+   * Handles collisions with other objects, currently has no behavior when colliding
+   * @param other Object that collided with this
+   */
+  def onCollision(other: Collidable) { } //Intentionally Blank
 }
