@@ -36,6 +36,8 @@ object PongDisplay {
     drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f), Keyboard.KEY_UP, Keyboard.KEY_DOWN))
     drawQueue.enqueue(new Paddle(650, 100, new Color(0.5f, 0.0f, 0.0f), Keyboard.KEY_W, Keyboard.KEY_S))
     drawQueue.enqueue(Ball(400, 400, new Color(0.0f, 0.0f, 0.5f)))
+    drawQueue.enqueue(new ScoreZone(1,0))
+    drawQueue.enqueue(new ScoreZone(799, 0))
 
     GL11.glMatrixMode(GL11.GL_PROJECTION)
     GL11.glLoadIdentity()
@@ -45,7 +47,9 @@ object PongDisplay {
     while (!Display.isCloseRequested) {
       // Clear the screen and depth buffer
       GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT)
+      if (drawQueue.filter(_.isInstanceOf[Ball]).length == 0) drawQueue.enqueue(Ball(400,400, new Color(0.0f, 0.0f, 0.5f)))
       drawQueue.foreach(_.update(drawQueue))
+      drawQueue.dequeueAll(_.deleteMe) //remove deleted objects
       drawQueue.foreach(_.draw())
       Display.update()
       Display.sync(60)

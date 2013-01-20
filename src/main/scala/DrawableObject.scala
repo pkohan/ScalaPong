@@ -29,6 +29,8 @@ abstract class DrawableObject(var x:Int, var y:Int, var width:Int, var height:In
     }
   }
 
+  var deleteMe = false
+
   /**
    * Gets the current time from lwjgl in milliseconds
    * @return current system time in milliseconds

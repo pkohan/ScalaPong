@@ -78,8 +78,8 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
   override def update(others:mutable.Queue[DrawableObject]) {
     super.update(others)
     val delta = getDelta
-    if (x <= 10 || x >= PongDisplay.Width - 10) xVel = -xVel
-    if (y <= 10 || y >= PongDisplay.Height - 10) yVel = -yVel
+    if (x <= 0 || x >= PongDisplay.Width) xVel = -xVel
+    if (y <= 0 || y >= PongDisplay.Height - 20) yVel = -yVel
     x += (delta * xVel).toInt
     y += (delta * yVel).toInt
   }
@@ -95,6 +95,8 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
     other match {
       case _:Paddle =>
         xVel = -xVel
+      case _:ScoreZone =>
+        deleteMe = true
       case _ =>
     }
   }
