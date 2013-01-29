@@ -17,7 +17,7 @@ object Ball {
   val Radius = 10.0f
   val Roundness = 10
 
-  def diameter = Radius * 2
+  def Diameter = Radius * 2
 
   /**
    * Create a Ball with the given parameters and return it
@@ -39,7 +39,7 @@ object Ball {
  * @param init_y Starting y position of the ball
  * @param c Color of the ball
  */
-class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball.Radius.toInt,init_y - Ball.Radius.toInt, Ball.diameter.toInt, Ball.diameter.toInt) with Collidable {
+class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball.Radius.toInt,init_y - Ball.Radius.toInt, Ball.Diameter.toInt, Ball.Diameter.toInt) with Collidable {
 
   var xVel:Float = 0.0f
   var yVel:Float = 0.0f
@@ -49,7 +49,7 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
   def draw() {
     GL11.glColor4f(c.r, c.g, c.b, c.a)
     GL11.glPushMatrix()
-      GL11.glTranslatef(x.toFloat, y.toFloat, 0)
+      GL11.glTranslatef(x.toFloat - Ball.Radius, y.toFloat - Ball.Radius, 0)
       GL11.glScalef(Ball.Radius, Ball.Radius, 1)
       GL11.glBegin(GL11.GL_TRIANGLE_FAN)
       for (i <- (0 until Ball.Roundness)) {
@@ -94,10 +94,14 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
   def onCollision(other: Collidable) {
     other match {
       case _:Paddle =>
+        //compute if it hit from the front or top or bottom
+
         xVel = -xVel
       case _:ScoreZone =>
         deleteMe = true
       case _ =>
     }
   }
+
+  override def updateBoundingBox() {boundingBox = new BoundingBox(x - Ball.Diameter.toInt, y - Ball.Diameter.toInt, width, height)}
 }

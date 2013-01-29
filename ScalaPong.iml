@@ -18,6 +18,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="scala" level="application" />
     <orderEntry type="library" exported="" name="lwjgl" level="project" />
+    <orderEntry type="library" name="slick-util" level="project" />
   </component>
 </module>
 

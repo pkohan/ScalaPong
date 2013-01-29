@@ -48,7 +48,7 @@ trait Collidable {
   def onCollision(other:Collidable)
 
   /**
-   * Updates the bounding box of each this object
+   * Updates the bounding box of this object
    */
   def updateBoundingBox() {boundingBox = BoundingBox(x,y,width,height)}
 }

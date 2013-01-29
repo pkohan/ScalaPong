@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/ScoreZone.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/slick_util.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Ball.scala" afterPath="$PROJECT_DIR$/src/main/scala/Ball.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" afterPath="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Collidable.scala" afterPath="$PROJECT_DIR$/src/main/scala/Collidable.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" afterPath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScalaPong.iml" afterPath="$PROJECT_DIR$/ScalaPong.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
@@ -21,16 +21,16 @@
     </list>
     <ignored path="ScalaPong.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358714764069" ignored="false" />
+    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359432766915" ignored="false" />
     <file path="/Runner.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358310080460" ignored="false" />
     <file path="/fragment.java" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358660586304" ignored="false" />
     <file path="/a.dummy" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358653450673" ignored="false" />
     <file path="/DisplayWrapper.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358120341285" ignored="false" />
     <file path="/DrawableObject.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358714899681" ignored="false" />
     <file path="/Paddle.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358659208646" ignored="false" />
-    <file path="/PongDisplay.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358715316976" ignored="false" />
+    <file path="/PongDisplay.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359433397505" ignored="false" />
     <file path="/Color.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134026001" ignored="false" />
-    <file path="/Ball.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358715102851" ignored="false" />
+    <file path="/Ball.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359433284124" ignored="false" />
     <file path="/README.md" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358137606213" ignored="false" />
     <file path="/Collidable.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358660562556" ignored="false" />
     <file path="/ScoreZone.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358715172822" ignored="false" />
@@ -53,6 +53,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -87,7 +88,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -109,7 +109,7 @@
       <file leaf-file-name="PongDisplay.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/PongDisplay.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="71" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.0">
+            <state line="16" column="40" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,7 +118,7 @@
       <file leaf-file-name="DrawableObject.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="57" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+            <state line="25" column="40" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +127,7 @@
       <file leaf-file-name="Collidable.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Collidable.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="92" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+            <state line="36" column="5" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,7 +136,7 @@
       <file leaf-file-name="Ball.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="29" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.47362384">
+            <state line="15" column="20" selection-start="239" selection-end="239" vertical-scroll-proportion="0.1559633">
               <folding />
             </state>
           </provider>
@@ -192,9 +192,9 @@
         <option value="$PROJECT_DIR$/src/main/scala/util/Color.scala" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/scala/Paddle.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Collidable.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/DrawableObject.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ScoreZone.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Collidable.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Ball.scala" />
       </list>
@@ -223,7 +223,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -234,10 +234,23 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -245,7 +258,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/lwjgl-2.8.5/jar/lzma.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/slick-util.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -468,7 +481,11 @@
       <created>1358660668565</created>
       <updated>1358660668565</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Ball now disappears when hitting one of the walls, will add scoring next">
+      <created>1358715587690</created>
+      <updated>1358715587690</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -555,7 +572,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Require classes that use trait Collidable also be DrawableObjects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ball now disappears when hitting one of the walls, will add scoring next" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -583,6 +600,7 @@
     <MESSAGE value="Added collision detection classes and methods, made ball properly collide with paddles." />
     <MESSAGE value="Commenting Spree, removed extra debug statement" />
     <MESSAGE value="Require classes that use trait Collidable also be DrawableObjects" />
+    <MESSAGE value="Ball now disappears when hitting one of the walls, will add scoring next" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -644,13 +662,6 @@
         <state line="3" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.058486238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/PongDisplay.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="71" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Paddle.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
@@ -665,23 +676,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Collidable.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="92" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+        <state line="25" column="40" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Collidable.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="57" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+        <state line="36" column="5" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/PongDisplay.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="40" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="29" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.47362384">
+        <state line="15" column="20" selection-start="239" selection-end="239" vertical-scroll-proportion="0.1559633">
           <folding />
         </state>
       </provider>
@@ -751,7 +769,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>lwjgl</last-edited>
+          <last-edited>slick-util</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

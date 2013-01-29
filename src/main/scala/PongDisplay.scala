@@ -35,7 +35,7 @@ object PongDisplay {
     //Initialize drawable objects and put them in the draw queue
     drawQueue.enqueue(new Paddle(100, 100, new Color(0.0f, 0.5f, 0.0f), Keyboard.KEY_UP, Keyboard.KEY_DOWN))
     drawQueue.enqueue(new Paddle(650, 100, new Color(0.5f, 0.0f, 0.0f), Keyboard.KEY_W, Keyboard.KEY_S))
-    drawQueue.enqueue(Ball(400, 400, new Color(0.0f, 0.0f, 0.5f)))
+    drawQueue.enqueue(Ball(400, 400, new Color(0.0f, 0.3f, 1.0f)))
     drawQueue.enqueue(new ScoreZone(1,0))
     drawQueue.enqueue(new ScoreZone(799, 0))
 
