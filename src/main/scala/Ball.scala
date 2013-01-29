@@ -65,7 +65,7 @@ class Ball(init_x:Int, init_y:Int, c:Color) extends DrawableObject(init_x - Ball
    */
   private def initRandomVelocity() {
     val rand = new Random()
-    val randAngle = Math.PI * 2 * rand.nextFloat() //TODO: make sure this doesn't go too parallel to paddles
+    val randAngle = Math.PI * 2 * rand.nextFloat() //TODO: make this less dumb
     //println(randAngle)w
     xVel = Ball.MaxSpeed * Math.cos(randAngle).toFloat
     yVel = Ball.MaxSpeed * Math.sin(randAngle).toFloat

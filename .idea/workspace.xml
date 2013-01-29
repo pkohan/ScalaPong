@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/slick_util.xml" />
+    <list default="true" id="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" name="Default" comment="Fixed ball collision to be better">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/slick-util.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Ball.scala" afterPath="$PROJECT_DIR$/src/main/scala/Ball.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Collidable.scala" afterPath="$PROJECT_DIR$/src/main/scala/Collidable.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" afterPath="$PROJECT_DIR$/src/main/scala/PongDisplay.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScalaPong.iml" afterPath="$PROJECT_DIR$/ScalaPong.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
@@ -21,7 +19,7 @@
     </list>
     <ignored path="ScalaPong.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359432766915" ignored="false" />
+    <file path="/Dummy.txt" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359433464042" ignored="false" />
     <file path="/Runner.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358310080460" ignored="false" />
     <file path="/fragment.java" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358660586304" ignored="false" />
     <file path="/a.dummy" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358653450673" ignored="false" />
@@ -30,7 +28,7 @@
     <file path="/Paddle.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358659208646" ignored="false" />
     <file path="/PongDisplay.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359433397505" ignored="false" />
     <file path="/Color.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358134026001" ignored="false" />
-    <file path="/Ball.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359433284124" ignored="false" />
+    <file path="/Ball.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1359433564847" ignored="false" />
     <file path="/README.md" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358137606213" ignored="false" />
     <file path="/Collidable.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358660562556" ignored="false" />
     <file path="/ScoreZone.scala" changelist="63c438ed-e82a-4663-99eb-b9c2fda0a2a1" time="1358715172822" ignored="false" />
@@ -136,7 +134,7 @@
       <file leaf-file-name="Ball.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="239" selection-end="239" vertical-scroll-proportion="0.1559633">
+            <state line="62" column="5" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.005733945">
               <folding />
             </state>
           </provider>
@@ -145,7 +143,7 @@
       <file leaf-file-name="ScoreZone.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ScoreZone.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,7 +234,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,9 +241,38 @@
               <option name="myItemId" value="ScalaPong" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaPong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -485,10 +511,14 @@
       <created>1358715587690</created>
       <updated>1358715587690</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed ball collision to be better">
+      <created>1359433457751</created>
+      <updated>1359433457751</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="1">
+  <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -510,7 +540,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -525,7 +555,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.19477054" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.19477054" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32962137" sideWeight="0.4955947" order="2" side_tool="false" content_ui="tabs" x="22" y="372" width="1874" height="296" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -572,7 +602,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ball now disappears when hitting one of the walls, will add scoring next" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed ball collision to be better" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -601,6 +631,7 @@
     <MESSAGE value="Commenting Spree, removed extra debug statement" />
     <MESSAGE value="Require classes that use trait Collidable also be DrawableObjects" />
     <MESSAGE value="Ball now disappears when hitting one of the walls, will add scoring next" />
+    <MESSAGE value="Fixed ball collision to be better" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -669,13 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ScoreZone.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/DrawableObject.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="40" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
@@ -697,9 +721,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ScoreZone.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Ball.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="239" selection-end="239" vertical-scroll-proportion="0.1559633">
+        <state line="62" column="5" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.005733945">
           <folding />
         </state>
       </provider>
